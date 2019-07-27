@@ -2,7 +2,7 @@ T.V. Series Recommendation project. Using Python and a certain amount of librari
 
 For information on the stages/steps of the project, check the project tab.
 
-Colaborators: 
+Collaborators: 
 -Jorge Agustín Erosa
 -Saúl Luna
 -Ariel Balam
