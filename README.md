@@ -2,6 +2,7 @@ Recommendation project. Using Python and a certain amount of libraries. Still do
 
 For information on the stages/steps of the project, check the project tab.
 Each branch contains the different files we worked with on the different stages of the project.
+
 *Project based on the book: Programming Collection Intelligence by Toby Segaran*
 
 Instructions:
