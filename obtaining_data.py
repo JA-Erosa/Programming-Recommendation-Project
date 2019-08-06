@@ -41,3 +41,26 @@ def Create_Movie_Recom(username):
         for j in Dict_MID['movieId']:
             if Dict_MID['movieId'][j]==peli:
                 print(Dict_MID['title'][j])
+
+def Movie_Recom_by_Movie(movieid):
+    print("The Data Set has",len(Movies_Id), "movies and", len(User_Ratings), "reviews")
+    print("This could take a few seconds...")
+    movie_based=cf.transformPrefs(Dict_byUser)
+    c=cf.topMatches(Dict_byUser,movieid)
+    print("\nMovie Recommendations For Movie ID", movieid,"\n")
+    for i in range(len(c)):
+        corr,peli=c[i]
+        #printing movie titles instead of the id
+        for j in Dict_MID['movieId']:
+            if Dict_MID['movieId'][j]==peli:
+                print(Dict_MID['title'][j])
+
+def User_Recom_by_Movie(movieid):
+    print("The Data Set has",len(Movies_Id), "movies and", len(User_Ratings), "reviews")
+    print("This could take a few seconds...")
+    movie_based=cf.transformPrefs(Dict_byUser)
+    k=cf.getRecommendations(Dict_byUser,movieid)
+    print("\n10 User Recommendations For Movie ID", movieid,"\n")
+    for i in range(10):
+        corr,usuario=k[i]
+        print("User",usuario)
