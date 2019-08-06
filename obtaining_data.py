@@ -46,7 +46,7 @@ def Movie_Recom_by_Movie(movieid):
     print("The Data Set has",len(Movies_Id), "movies and", len(User_Ratings), "reviews")
     print("This could take a few seconds...")
     movie_based=cf.transformPrefs(Dict_byUser)
-    c=cf.topMatches(Dict_byUser,movieid)
+    c=cf.topMatches(movie_based,movieid)
     print("\nMovie Recommendations For Movie ID", movieid,"\n")
     for i in range(len(c)):
         corr,peli=c[i]
@@ -59,8 +59,8 @@ def User_Recom_by_Movie(movieid):
     print("The Data Set has",len(Movies_Id), "movies and", len(User_Ratings), "reviews")
     print("This could take a few seconds...")
     movie_based=cf.transformPrefs(Dict_byUser)
-    k=cf.getRecommendations(Dict_byUser,movieid)
-    print("\n10 User Recommendations For Movie ID", movieid,"\n")
-    for i in range(10):
+    k=cf.getRecommendations(movie_based,movieid)
+    for i in range(len(k[:10])):
         corr,usuario=k[i]
+        #printing movie titles instead of the id
         print("User",usuario)
