@@ -21,3 +21,5 @@ while flag==True:
     elif option==5:
         print("Goodbye!")
         flag=False
+    else:
+        print("Not a valid option, try again!")
