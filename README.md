@@ -11,6 +11,3 @@ Then just run the main program!
 
 Collaborators: 
 -Jorge Agustín Erosa
--Saúl Luna
--Ariel Balam
--Ángel Concha
